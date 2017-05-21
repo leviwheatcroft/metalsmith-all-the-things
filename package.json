@@ -4,23 +4,11 @@
   "description": "Complex Metalsmith Demo",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently --raw \"npm run watch\" \"npm run sync\" ",
     "build": "cross-env DEBUG=metalsmith* babel-node build",
     "sync": "cross-env DEBUG=metalsmith* babel-node sync",
-    "watch": "nodemon --exec \"npm run build\"",
     "deploy": "cross-env DEBUG=metalsmith* babel-node deploy",
-    "docs": "./node_modules/docker/docker -o ./docs -x .README.md,README.md,test,node_modules,notes,docs,.git",
-    "readme": "node ./node_modules/.bin/node-readme"
-  },
-  "watch": {
-    "build": {
-      "patterns": [
-        "lib",
-        "build.js",
-        "layouts",
-        "src"
-      ]
-    }
+    "watch": "nodemon --exec \"npm run build\"",
+    "dev": "concurrently --raw \"npm run watch\" \"npm run sync\" "
   },
   "repository": {
     "type": "git",
