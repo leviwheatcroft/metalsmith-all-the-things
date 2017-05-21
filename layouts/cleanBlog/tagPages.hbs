@@ -1,0 +1,18 @@
+<div class="col-md-8 col-md-offset-1">
+  {{#each pagination.files}}
+    <div class="post-preview">
+      <a href="/{{this.path}}">
+        <h2 class="post-title">
+          {{this.title}}
+         </h2>
+        {{#if this.exerpt}}
+          <h3 class="post-subtitle">
+            {{this.exerpt}}
+          </h3>
+        {{/if}}
+      </a>
+      <p class="post-meta">Posted on {{this.date}}</p>
+    </div>
+    <hr>
+  {{/each}}
+</div>

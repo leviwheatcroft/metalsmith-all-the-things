@@ -1,0 +1,22 @@
+{
+  "restartable": "rs",
+  "ignore": [
+    ".git",
+    "node_modules/**/node_modules"
+  ],
+  "verbose": true,
+  "events": {
+    "restart": ""
+  },
+  "watch": [
+    "src",
+    "lib",
+    "layouts",
+    "config",
+    "build.js"
+  ],
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "ext": "js json md hbs"
+}

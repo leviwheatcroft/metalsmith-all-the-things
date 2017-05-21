@@ -1,0 +1,10 @@
+*.log
+npm-debug.log*
+build
+node_modules
+config/local.js
+.nyc_output
+coverage
+.node-persist
+.store
+cache.json

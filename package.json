@@ -1,0 +1,114 @@
+{
+  "name": "metalsmith-all-the-things",
+  "version": "0.0.0",
+  "description": "Complex Metalsmith Demo",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently --raw \"npm run watch\" \"npm run sync\" ",
+    "build": "cross-env DEBUG=metalsmith* babel-node build",
+    "sync": "cross-env DEBUG=metalsmith* babel-node sync",
+    "watch": "nodemon --exec \"npm run build\"",
+    "deploy": "cross-env DEBUG=metalsmith* babel-node deploy",
+    "docs": "./node_modules/docker/docker -o ./docs -x .README.md,README.md,test,node_modules,notes,docs,.git",
+    "readme": "node ./node_modules/.bin/node-readme"
+  },
+  "watch": {
+    "build": {
+      "patterns": [
+        "lib",
+        "build.js",
+        "layouts",
+        "src"
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/leviwheatcroft/metalsmith-all-the-things.git"
+  },
+  "keywords": [
+    "blog",
+    "static",
+    "metalsmith",
+    "node"
+  ],
+  "author": "Levi Wheatcroft <levi@wheatcrofts.com.au> (http://leviwheatcroft.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leviwheatcroft/metalsmith-all-the-things/issues"
+  },
+  "homepage": "https://github.com/leviwheatcroft/metalsmith-all-the-things#readme",
+  "dependencies": {
+    "aws-sdk": "^2.49.0",
+    "babel-cli": "^6.16.0",
+    "babel-core": "^6.17.0",
+    "babel-eslint": "^7.0.0",
+    "babel-plugin-istanbul": "^2.0.1",
+    "babel-preset-es2015-node4": "^2.1.0",
+    "babel-preset-es2015-node6": "^0.3.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "babel-register": "^6.16.3",
+    "browser-sync": "^2.18.11",
+    "concurrently": "^3.1.0",
+    "config": "^1.24.0",
+    "cross-env": "^3.1.3",
+    "css-loader": "^0.28.1",
+    "debug": "^2.6.6",
+    "eslint": "^3.7.1",
+    "eslint-config-standard": "^6.2.0",
+    "eslint-plugin-babel": "^3.3.0",
+    "eslint-plugin-promise": "^3.0.0",
+    "eslint-plugin-standard": "^2.0.1",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "handlebars": "^4.0.5",
+    "handlebars-cloudinary": "0.0.1",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.3",
+    "lodash": "4.16.4",
+    "marked-cloudinary": "0.0.4",
+    "metalsmith": "^2.2.0",
+    "metalsmith-cloudinary": "git://github.com/superwolff/metalsmith-cloudinary.git#push",
+    "metalsmith-collections": "^0.9.0",
+    "metalsmith-drafts": "0.0.1",
+    "metalsmith-google-drive": "^0.1.2",
+    "metalsmith-interpolate": "github:leviwheatcroft/metalsmith-interpolate",
+    "metalsmith-layouts": "^1.8.1",
+    "metalsmith-markdown": "^0.2.1",
+    "metalsmith-move": "github:leviwheatcroft/metalsmith-move",
+    "metalsmith-tags": "github:leviwheatcroft/metalsmith-tags",
+    "metalsmith-webpack": "git://github.com/christophercliff/metalsmith-webpack.git#v2",
+    "mime-db": "^1.24.0",
+    "node-persist": "^2.0.11",
+    "node-readme": "^0.1.9",
+    "npm-watch": "^0.1.9",
+    "progress": "^2.0.0",
+    "readdir-enhanced": "^1.5.2",
+    "s3": "^4.4.0",
+    "st": "^1.2.0",
+    "style-loader": "^0.17.0",
+    "vow": "^0.4.12",
+    "vow-node": "^0.3.0",
+    "webpack": "^2.5.1"
+  },
+  "devDependencies": {},
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": "standard",
+    "installedESLint": true,
+    "plugins": [
+      "standard",
+      "babel"
+    ],
+    "env": {
+      "node": true,
+      "mocha": true,
+      "jquery": true
+    }
+  },
+  "babel": {
+    "presets": [
+      "stage-0",
+      "es2015-node6"
+    ]
+  }
+}
