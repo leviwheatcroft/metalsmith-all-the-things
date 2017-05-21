@@ -7,7 +7,7 @@ import http from 'http'
 const dbg = debug(`metalsmith-${config.get('debugNamespace')}`)
 
 let metalsmith = Metalsmith(__dirname)
-
+let start = Date.now()
 metalsmith.metadata(config.get('meta'))
 metalsmith.plugins = plugins
 
@@ -16,4 +16,5 @@ metalsmith.build((err, files) => {
   // trigger reload
   http.get('http://localhost:3000/__browser_sync__?method=reload')
   .on('error', () => dbg('browserSync not listening?'))
+  dbg(`build in ${Date.now() - start}ms`)
 })

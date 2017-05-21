@@ -10,6 +10,7 @@ import browserSync from 'browser-sync'
  */
 browserSync.create()
 .init({
+  open: false,
   server: {
     baseDir: 'build',
     index: 'index',
