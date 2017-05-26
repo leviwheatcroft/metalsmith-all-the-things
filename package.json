@@ -66,7 +66,6 @@
     "metalsmith-tags": "github:leviwheatcroft/metalsmith-tags",
     "metalsmith-webpack": "git://github.com/christophercliff/metalsmith-webpack.git#v2",
     "mime-db": "^1.24.0",
-    "node-persist": "^2.0.11",
     "node-readme": "^0.1.9",
     "npm-watch": "^0.1.9",
     "progress": "^2.0.0",
