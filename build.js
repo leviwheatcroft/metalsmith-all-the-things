@@ -3,10 +3,12 @@ import debug from 'debug'
 import plugins from './lib/plugins'
 import config from 'config'
 import http from 'http'
+import debugUi from 'metalsmith-debug-ui'
 
 const dbg = debug(`metalsmith-${config.get('debugNamespace')}`)
 
 let metalsmith = Metalsmith(__dirname)
+debugUi.patch(metalsmith) // patch with metalsmith-debug-ui
 let start = Date.now()
 metalsmith.metadata(config.get('meta'))
 metalsmith.plugins = plugins

@@ -14,6 +14,10 @@ Everyone loves metalsmith's agnostic, dogma free approach to static sites... but
  * google-drive - scrape content from google drive folders to include in your build. Think of it as a poor mans CMS, free ubiquitous access for editing content.
  * cloudinary - upload images to cloudinary, then format them as required in your layouts & markdown. This means no local dependencies on imagemagick and friends.
 
+### documentation
+
+There's more detailed information about implementation of different features in [/src/articles][/src/articles].
+
 ### usage
 
 ```bash
@@ -34,3 +38,5 @@ MIT
 ### author
 
 Levi Wheatcroft <levi@wht.cr>
+
+[/src/articles]: https://github.com/leviwheatcroft/metalsmith-all-the-things/tree/master/src/articles
