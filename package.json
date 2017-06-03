@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-all-the-things",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Complex Metalsmith Demo",
   "main": "index.js",
   "scripts": {
