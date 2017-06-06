@@ -41,3 +41,5 @@ It will render like this:
 Which, without additional styling, will look like this. The `&quot;` and `<p>` tag is normal marked behaviour. Of course you can modify the appearance with your own styling.
 
 ![coal mine](images/coal-mine "coal mine { width: 400, height: 300, crop: 'fill'}")
+
+**Note:** the image above will be broken if you're viewing this in the git repo. Git will use it's own markdown engine to render this file, which of course doesn't include the `marked-cloudinary` renderer. If you want to see this in action, clone the repo, and build & serve locally.

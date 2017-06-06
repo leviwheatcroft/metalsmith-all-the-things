@@ -57,7 +57,7 @@
     "metalsmith": "^2.2.0",
     "metalsmith-cloudinary": "git://github.com/superwolff/metalsmith-cloudinary.git#push",
     "metalsmith-collections": "^0.9.0",
-    "metalsmith-debug-ui": "^0.1.0",
+    "metalsmith-debug-ui": "^0.1.1",
     "metalsmith-drafts": "0.0.1",
     "metalsmith-google-drive": "^0.1.5",
     "metalsmith-interpolate": "github:leviwheatcroft/metalsmith-interpolate",
