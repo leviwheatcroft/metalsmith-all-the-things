@@ -32,7 +32,7 @@ module.exports = {
     api_key: '927297772351274',
     api_secret: 'Tk-Q6ENrWHJ66FT-oDSqJVTVNW8'
   },
-  debugNamespace: 'att',
+  debugNamespace: 'metalsmith-att',
   'images-drive-folder': '0B1QpLgu4mpt8UXBRWEVxblhVbzg',
   'articles-drive-folder': '0B1QpLgu4mpt8R1hHWi1wWFkyV2s'
 }

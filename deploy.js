@@ -3,8 +3,7 @@ import deploy from './lib/deploy'
 deploy({
   srcPath: 'build',
   destPath: '',
-  bucket: 'leviwheatcroft.com',
-  debugNamespace: 'metalsmith-levistat',
-  cacheRoot: '.store',
-  concurrency: 16
+  bucket: 'metalsmith-all-the-things',
+  concurrency: 2,
+  clearCache: process.argv.slice(-1)[0] === '--clear-cache'
 })
